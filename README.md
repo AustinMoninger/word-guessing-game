@@ -23,82 +23,158 @@ How many guesses do you want? **_10_**
 
 plane: ++
 
-9: Guess a 5-letter word (enter 'r' for remaining words): **lanes**
+9: Guess a 5-letter word (enter 'r' for remaining words): **_lanes_**
 
 plane: ++
+
 lanes: ***
+
 8: Guess a 5-letter word (enter 'r' for remaining words): **mones**
+
 plane: ++
+
 lanes: ***
+
 mones: **
-7: Guess a 5-letter word (enter 'r' for remaining words): **tanem**
+
+7: Guess a 5-letter word (enter 'r' for remaining words): **_tanem_**
+
 plane: ++
+
 lanes: ***
+
 mones: **
+
 tanem: *
-6: Guess a 5-letter word (enter 'r' for remaining words): **linos**
+
+6: Guess a 5-letter word (enter 'r' for remaining words): **_linos_**
+
 plane: ++
+
 lanes: ***
+
 mones: **
+
 tanem: *
+
 linos: **
-5: Guess a 5-letter word (enter 'r' for remaining words): **latos**
+
+5: Guess a 5-letter word (enter 'r' for remaining words): **_latos_**
+
 plane: ++
+
 lanes: ***
+
 mones: **
+
 tanem: *
+
 linos: **
+
 latos: **
-4: Guess a 5-letter word (enter 'r' for remaining words): **lanem**
+
+4: Guess a 5-letter word (enter 'r' for remaining words): **_lanem_**
+
 plane: ++
+
 lanes: ***
+
 mones: **
+
 tanem: *
+
 linos: **
+
 latos: **
+
 lanem: **
-3: Guess a 5-letter word (enter 'r' for remaining words): **lonts**
+
+3: Guess a 5-letter word (enter 'r' for remaining words): **_lonts_**
+
 plane: ++
+
 lanes: ***
+
 mones: **
+
 tanem: *
+
 linos: **
+
 latos: **
+
 lanem: **
+
 lonts: **
-2: Guess a 5-letter word (enter 'r' for remaining words): **lantr**
+
+2: Guess a 5-letter word (enter 'r' for remaining words): **_lantr_**
+
 plane: ++
+
 lanes: ***
+
 mones: **
+
 tanem: *
+
 linos: **
+
 latos: **
+
 lanem: **
+
 lonts: **
+
 lantr: *
-1: Guess a 5-letter word (enter 'r' for remaining words): **r**
+
+
+1: Guess a 5-letter word (enter 'r' for remaining words): **_r_**
+
 	Remaining words:
+	
 	leges
+	
 	lexes
+	
 	lezes
+	
 	lubes
+	
 	luces
+	
 	ludes
+	
 	luges
+	
 	luxes
+	
 	lyses
-1: Guess a 5-letter word (enter 'r' for remaining words): **leges**
+	
+1: Guess a 5-letter word (enter 'r' for remaining words): **_leges_**
 plane: ++
+
 lanes: ***
+
 mones: **
+
 tanem: *
+
 linos: **
+
 latos: **
+
 lanem: **
+
+
 lonts: **
+
 lantr: *
+
 leges: ***
+
 You are out of guesses!
+
 The word was: lubes
+
 Do you want to play Code Word? (y/n)? 
 	
