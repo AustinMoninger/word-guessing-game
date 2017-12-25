@@ -21,111 +21,111 @@ How many guesses do you want? **_10_**
 
 10: Guess a 5-letter word (enter 'r' for remaining words): **_plane_**
 
-plane: ++
+	plane: ++
 
 9: Guess a 5-letter word (enter 'r' for remaining words): **_lanes_**
 
-plane: ++
+	plane: ++
 
-lanes: ***
+	lanes: ***
 
 8: Guess a 5-letter word (enter 'r' for remaining words): **mones**
 
-plane: ++
+	plane: ++
 
-lanes: ***
+	lanes: ***
 
-mones: **
+	mones: **
 
 7: Guess a 5-letter word (enter 'r' for remaining words): **_tanem_**
 
-plane: ++
+	plane: ++
 
-lanes: ***
+	lanes: ***
 
-mones: **
+	mones: **
 
-tanem: *
+	tanem: *
 
 6: Guess a 5-letter word (enter 'r' for remaining words): **_linos_**
 
-plane: ++
+	plane: ++
 
-lanes: ***
+	lanes: ***
 
-mones: **
+	mones: **
 
-tanem: *
+	tanem: *
 
-linos: **
+	linos: **
 
 5: Guess a 5-letter word (enter 'r' for remaining words): **_latos_**
 
-plane: ++
+	plane: ++
 
-lanes: ***
+	lanes: ***
 
-mones: **
+	mones: **
 
-tanem: *
+	tanem: *
 
-linos: **
+	linos: **
 
-latos: **
+	latos: **
 
 4: Guess a 5-letter word (enter 'r' for remaining words): **_lanem_**
 
-plane: ++
+	plane: ++
 
-lanes: ***
+	lanes: ***
 
-mones: **
+	mones: **
 
-tanem: *
+	tanem: *
 
-linos: **
+	linos: **
 
-latos: **
+	latos: **
 
-lanem: **
+	lanem: **
 
 3: Guess a 5-letter word (enter 'r' for remaining words): **_lonts_**
 
-plane: ++
+	plane: ++
 
-lanes: ***
+	lanes: ***
 
-mones: **
+	mones: **
 
-tanem: *
+	tanem: *
 
-linos: **
+	linos: **
 
-latos: **
+	latos: **
 
-lanem: **
+	lanem: **
 
-lonts: **
+	lonts: **
 
 2: Guess a 5-letter word (enter 'r' for remaining words): **_lantr_**
 
-plane: ++
+	plane: ++
 
-lanes: ***
+	lanes: ***
 
-mones: **
+	mones: **
 
-tanem: *
+	tanem: *
 
-linos: **
+	linos: **
 
-latos: **
+	latos: **
 
-lanem: **
+	lanem: **
 
-lonts: **
+	lonts: **
 
-lantr: *
+	lantr: *
 
 
 1: Guess a 5-letter word (enter 'r' for remaining words): **_r_**
@@ -151,30 +151,27 @@ lantr: *
 	lyses
 	
 1: Guess a 5-letter word (enter 'r' for remaining words): **_leges_**
-plane: ++
 
-lanes: ***
+	plane: ++
 
-mones: **
+	lanes: ***
 
-tanem: *
+	mones: **
 
-linos: **
+	tanem: *
 
-latos: **
+	linos: **
 
-lanem: **
+	latos: **
 
+	lanem: **
 
-lonts: **
+	lonts: **
 
-lantr: *
+	lantr: *
 
-leges: ***
+	leges: ***
 
 You are out of guesses!
 
-The word was: lubes
-
-Do you want to play Code Word? (y/n)? 
-	
+The word was: lubes	
