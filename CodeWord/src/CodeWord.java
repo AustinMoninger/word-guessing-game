@@ -11,56 +11,51 @@ public class CodeWord {
 
 	public static void main(String[] args) 
 			throws FileNotFoundException {
-		readDictionary(); // reads in dictionary
+		readDictionary(); 
 		Scanner console = new Scanner(System.in);
 		Random rand = new Random();
 		
 		while(yesTo("Do you want to play Code Word?", console)) {
-			console.nextLine(); // moves cursor past the carriage return
-			String codeWord = dictionary[rand.nextInt(DICTIONARYSIZE)]; // randomly selects word from dictionary
+			console.nextLine();
+			String codeWord = dictionary[rand.nextInt(DICTIONARYSIZE)];
 			
 			for(int i = 0; i < inPlay.length; i++) {
 				inPlay[i] = true; // all words are in play after a new code word is chosen
 			}
 			int numberOfGuesses = getValidNumberOfGuesses("How many guesses do you want? ", console);
-			console.nextLine(); // moves cursor past the carriage return
+			console.nextLine(); 
 			
-			String hint = ""; // will become the String of *'s and +'s
-			int guessesSoFar = 0; // number of times the loop has iterated
-			String[] historyOfGuesses = new String[numberOfGuesses]; // essentially, the array of previous hints
+			String hint = ""; 
+			int guessesSoFar = 0; 
+			String[] historyOfGuesses = new String[numberOfGuesses]; 
 			
-			for(int i = numberOfGuesses; i > 0; i--) { // loops after each guess
-//				System.out.println("THIS IS CHEATING. THE CODEWORD IS: " + codeWord); // TEST
-				
+			for(int i = numberOfGuesses; i > 0; i--) { 
 				String guess = getValidGuess(i + ": Guess a 5-letter word (enter 'r' for remaining words): ", console);
 				
-				for(int j = 0; j < historyOfGuesses.length; j++) { // prints all previous guesses
-					if(historyOfGuesses[j] != null)	// if the element exists
+				for(int j = 0; j < historyOfGuesses.length; j++)  
+					if(historyOfGuesses[j] != null)	
 						System.out.println(historyOfGuesses[j]);
-				}		
 				
-				hint = feedback(guess, codeWord); // the String of *'s and +'s
+				hint = feedback(guess, codeWord);
 				System.out.println(guess + ": " + hint); // hint format (i.e. cloud: **+)
-				guessesSoFar++; // increases number of times the loop has iterated
+				guessesSoFar++; 
 				
-				// i is decreasing, so subtracting it from the length increases the index after iterating
 				historyOfGuesses[historyOfGuesses.length - i] = guess + ": " + hint;
-				
 				removeWordsWithDifferentFeedback(guess, hint);
 	            	
-				if(hint.equals("*****")) { // if the guess is correct
-					if(guessesSoFar == 1) { // if it was the first guess
-						System.out.println("You won in " + guessesSoFar + " guess!" // fixes grammar
+				if(hint.equals("*****")) { 
+					if(guessesSoFar == 1) { 
+						System.out.println("You won in " + guessesSoFar + " guess!" 
 								+ " The word was: " + codeWord);
 					}
-					else { // if it was after the first guess
+					else { 
 						System.out.println("You won in " + guessesSoFar + " guesses!"
 								+ " The word was: " + codeWord);
-					i = 0; // stops the loop
+					i = 0; 
 					}
 				} 
-				else if(i == 1) { // The last guess has been made, run out of guesses
-					System.out.println("You are bad at guessing. Just kidding, the dictionary makes this game impossible."
+				else if(i == 1) { 
+					System.out.println("You are bad at guessing. Just kidding, the dictionary makes this game extremely difficult."
 							+ "\nThe word was: " + codeWord);
 				}
 			}
@@ -75,11 +70,9 @@ public class CodeWord {
 	 */
 	public static void listOfRemainingWords(String[] dictionary) {
 		System.out.println("\tRemaining words:");
-		for(int i = 0; i < DICTIONARYSIZE; i++) {
-			if(inPlay[i]) { // if the element is still in play,
-				System.out.println("\t" + dictionary[i]); // print it (tab spacing for appearance's sake)
-			}
-		}	
+		for(int i = 0; i < DICTIONARYSIZE; i++) 
+			if(inPlay[i])  
+				System.out.println("\t" + dictionary[i]); 	
 	}
 	
 	/**
@@ -93,19 +86,19 @@ public class CodeWord {
 	 */
 	public static int getValidNumberOfGuesses(String prompt, Scanner console) {
 		for(;;) {		
-			System.out.print(prompt); // How many guesses?
+			System.out.print(prompt); 
 			if(console.hasNextInt()) {
 				int numberOfGuesses = console.nextInt();
-				if(numberOfGuesses > 0) { // if the number of guesses is a positive integer, return it	
+				if(numberOfGuesses > 0) { 	
 					return numberOfGuesses;
 				}
-				else { // if the token is an integer, but is not positive
-					console.nextLine(); // moves cursor past the carriage return
+				else { 
+					console.nextLine(); 
 					System.out.println("Please enter a positive integer.");				
 				}
 			}
-			else { // if the token is not a number, skip to the next token
-				console.nextLine(); // moves cursor past the carriage return
+			else { 
+				console.nextLine(); 
 				System.out.println("Please enter a positive integer with no other characters.");
 			}	
 		}
@@ -123,28 +116,25 @@ public class CodeWord {
 	public static String getValidGuess(String prompt, Scanner console) {
 		for(;;) {
 			boolean valid = true;
-			System.out.print(prompt); // guess a 5-letter word or 'r'
+			System.out.print(prompt);
 			String guess = console.nextLine();
-			if(guess.equals("r")) { // if the user enters r,
-				listOfRemainingWords(dictionary); // give the list of remaining possible words
+			if(guess.equals("r")) { 
+				listOfRemainingWords(dictionary); 
 			}
-			else if(guess.length() != WORDLENGTH) { // If guess is not 5-letters long
+			else if(guess.length() != WORDLENGTH) { 
 				System.out.println("Your guess is not 5-letters long. Please try again.");
 				valid = false;
 			}
 			else {
-				for(int i = 0; i < WORDLENGTH && valid; i++) { // If guess is 5-letters long
-					// Check for non-letters or upper case letters
+				for(int i = 0; i < WORDLENGTH && valid; i++) { 
 					if(!Character.isLetter(guess.charAt(i)) || Character.isUpperCase(guess.charAt(i))) {
 						System.out.println("Please use only lowercase letters in your guess. Try again.");
 						valid = false;
 					}
 				}
-				if(valid) { // once the guess is valid
+				if(valid) 
 					return guess;
-				}
 			}
-			
 		}
 	}
 	
@@ -153,11 +143,10 @@ public class CodeWord {
 	 * @throws FileNotFoundException 
 	 */
 	public static void readDictionary() 
-			throws FileNotFoundException{
+			throws FileNotFoundException {
 		Scanner scan = new Scanner(new File("wordList.txt"));	
-		for(int i = 0; i < dictionary.length; i++) { // iterates through each element of dictionary
-			dictionary[i] = scan.next(); // reads in next word and assigns it to the array element
-		}
+		for(int i = 0; i < dictionary.length; i++) 
+			dictionary[i] = scan.next(); 
 		scan.close();
 	}
 
@@ -169,12 +158,9 @@ public class CodeWord {
 	 * @param feedback String of *'s and +'s resulting from comparing the guess to the code word
 	 */
 	public static void removeWordsWithDifferentFeedback(String guess, String feedback) {
-		for(int i = 0; i < DICTIONARYSIZE; i++) {
-			// if the guess' feedback is the same as the feedback of element i in the inPlay array
-			if(!feedback.equals(feedback(dictionary[i], guess))) {
-				inPlay[i] = false; // make the element false
-			}
-		}	
+		for(int i = 0; i < DICTIONARYSIZE; i++) 
+			if(!feedback.equals(feedback(dictionary[i], guess))) 
+				inPlay[i] = false;
 	}
 
 	/**
@@ -191,23 +177,24 @@ public class CodeWord {
 	 *         of direct and indirect matches.
 	 */
 	public static String feedback(String word1, String word2) {
-		boolean[] b1 = new boolean[WORDLENGTH]; // an element will be true when...
-		boolean[] b2 = new boolean[WORDLENGTH]; // ... the letter is a match
-		String result = ""; // will become the String of *'s and +'s
+		boolean[] b1 = new boolean[WORDLENGTH]; 
+		boolean[] b2 = new boolean[WORDLENGTH];
+		String result = ""; 
 		
+		// direct match
 		for(int i = 0; i < WORDLENGTH; i++) {
-			if(word1.charAt(i) == word2.charAt(i)) { // if there is a direct match
+			if(word1.charAt(i) == word2.charAt(i)) { 
 				result += "*";
-				b1[i] = true; // these ensure that a letter is not counted again when checking for indirect matches
+				b1[i] = true;
 				b2[i] = true;				
 			}
-		}	
+		}
+		// indirect match
 		for(int i = 0; i < WORDLENGTH; i++) {
 			for(int j = 0; j < WORDLENGTH; j++) {
-				 // if the letter was not in the correct place, but the letter is in the code word (indirect match)
-				if(!b1[i] && !b2[j] && word1.charAt(i) == word2.charAt(j)) { // !b1[i] and !b2[j] check that the letter has not been counted
+				 if(!b1[i] && !b2[j] && word1.charAt(i) == word2.charAt(j)) {
 					result += "+";
-					b1[i] = true; // these ensure that a letter is not counted multiple times
+					b1[i] = true; 
 					b2[j] = true;
 				}
 			}
@@ -217,7 +204,7 @@ public class CodeWord {
 	
 	/**
 	 * Utility function to ask user yes or no.
-     * It uses a forever loop -- but the loop stops when something is returned.
+         * It uses a forever loop -- but the loop stops when something is returned.
 	 * @param prompt Text presented to user
 	 * @param console Source of user input
 	 * @return Whether user types 'y' (as opposed to 'n').
@@ -226,9 +213,9 @@ public class CodeWord {
 		for (;;) {
 			System.out.print(prompt + " (y/n)? ");
 			String response = console.next().trim().toLowerCase();
-			if (response.equals("y")) // if yes
+			if (response.equals("y"))
 				return true;
-			else if (response.equals("n")) // if no
+			else if (response.equals("n"))
 				return false;
 			else
 				System.out.println("Please answer y or n.");
