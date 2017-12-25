@@ -3,7 +3,7 @@
 In this game, the computer picks an arbitrary 5-letter word from the dictionary. You have a set number of turns (that you set for yourself) to guess which word the computer has chosen. For every guess, the computer will indicate which letters of your guess were correct: '\*' for in-place matches (correct letters in the correct position) and '+' for out-of-place matches (letters that do appear in the word, but not in the same position). **However, note that no information about specific positions is provided in the feedback.** The number of each type of match is revealed, but the user is not told which positions the matches correspond to.
 
 ### Input
-You can only use correct, 5-letter, lowercase English words for your guesses; names and inflections are not allowed.
+You can only use 5-letter, lowercase character Strings to guess.
 
 You can also input 'r' (for remaining words) into the guess field to bring up a list of all possible leftover words based on your previous guesses.
 
