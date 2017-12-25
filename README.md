@@ -13,5 +13,92 @@ An in-place match is a letter that is both the same, and in the same place, in a
 
 An out-of-place match is a letter in a guess word that is not an in-place match, but is a letter in the code word at a position that is also not an in-place match. For example, “tests” and “treat” have two out-of-place matches between them: The ‘e’ in position 1 of “tests” is in position 2 of “treats,” and the second ‘t’ of “tests” in position 3 corresponds to the second ‘t’ of “treat,” which is in position 4. The ‘t’ in position 0 of both words is not counted because it is an in-place match.
 
+### Example
 
+Do you want to play Code Word? (y/n)? **_y_**
+
+How many guesses do you want? **_10_**
+
+10: Guess a 5-letter word (enter 'r' for remaining words): **_plane_**
+
+plane: ++
+
+9: Guess a 5-letter word (enter 'r' for remaining words): **lanes**
+
+plane: ++
+lanes: ***
+8: Guess a 5-letter word (enter 'r' for remaining words): **mones**
+plane: ++
+lanes: ***
+mones: **
+7: Guess a 5-letter word (enter 'r' for remaining words): **tanem**
+plane: ++
+lanes: ***
+mones: **
+tanem: *
+6: Guess a 5-letter word (enter 'r' for remaining words): **linos**
+plane: ++
+lanes: ***
+mones: **
+tanem: *
+linos: **
+5: Guess a 5-letter word (enter 'r' for remaining words): **latos**
+plane: ++
+lanes: ***
+mones: **
+tanem: *
+linos: **
+latos: **
+4: Guess a 5-letter word (enter 'r' for remaining words): **lanem**
+plane: ++
+lanes: ***
+mones: **
+tanem: *
+linos: **
+latos: **
+lanem: **
+3: Guess a 5-letter word (enter 'r' for remaining words): **lonts**
+plane: ++
+lanes: ***
+mones: **
+tanem: *
+linos: **
+latos: **
+lanem: **
+lonts: **
+2: Guess a 5-letter word (enter 'r' for remaining words): **lantr**
+plane: ++
+lanes: ***
+mones: **
+tanem: *
+linos: **
+latos: **
+lanem: **
+lonts: **
+lantr: *
+1: Guess a 5-letter word (enter 'r' for remaining words): **r**
+	Remaining words:
+	leges
+	lexes
+	lezes
+	lubes
+	luces
+	ludes
+	luges
+	luxes
+	lyses
+1: Guess a 5-letter word (enter 'r' for remaining words): **leges**
+plane: ++
+lanes: ***
+mones: **
+tanem: *
+linos: **
+latos: **
+lanem: **
+lonts: **
+lantr: *
+leges: ***
+You are out of guesses!
+The word was: lubes
+Do you want to play Code Word? (y/n)? 
 	
