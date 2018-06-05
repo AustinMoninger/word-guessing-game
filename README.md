@@ -173,5 +173,3 @@ How many guesses do you want? **_10_**
 	leges: ***
 
 You are out of guesses!
-
-The word was: lubes	
